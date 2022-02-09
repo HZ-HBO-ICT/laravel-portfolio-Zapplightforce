@@ -14,7 +14,8 @@ body, html {
     padding: 14px 16px;
     font-size: 17px;
     width: 20%;
-    display: inline;
+    height: 10%;
+    display: block;
 }
 
 .tablink:hover {
@@ -52,7 +53,7 @@ body, html {
     color: white;
     padding: 14px 16px;
     background-color: inherit;
-    margin: 0;
+    margin-right: 0;
 }
 
 /* Add a red background color to navigation links on hover */

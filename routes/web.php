@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WelcomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function (){
-    return view('portfolio');
-});
+Route::get('/{page}', [WelcomeController::class, 'show']);
+
+Route::get('/blog/{post}', [WelcomeController::class, 'blog']);
+

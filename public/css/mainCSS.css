@@ -1,5 +1,7 @@
 body{
     background-color: black;
+    display: block;
+    margin-top: 50px;
 }
 header {
     width: 100%;
@@ -25,7 +27,9 @@ h1 {
 .hzlogo {
     width: 500px;
     height: 500px;
-    margin-left: 30%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 h2 {
