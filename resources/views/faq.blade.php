@@ -128,6 +128,13 @@
     <span class="code_a" style="margin-left: 40mm;">&lt/table&gt</span>
     <br>
     <span class="code_a">&lt/body&gt</span>
+
+<ul style="color: white">
+    @foreach($posts as $post)
+        <li>{{ $post->question }}</li>
+    @endforeach
+</ul>
+
 </body>
 
 
