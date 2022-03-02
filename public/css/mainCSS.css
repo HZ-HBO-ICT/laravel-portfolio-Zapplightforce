@@ -1,4 +1,4 @@
-body{
+body {
     background-color: black;
     display: block;
     margin-top: 50px;
@@ -8,6 +8,8 @@ header {
     border:rgb(255, 255, 255);
     border-style: solid none none none;
     border-width: 3px;
+    background: linear-gradient(to right, #000000 20%, #313131  40%, #565656  60%, #7B7B7B  80%);
+    display: inline-block;
 }
 h1 {
     color: rgb(154, 216, 250);
@@ -18,11 +20,11 @@ h1 {
     margin-bottom: 0;
 }
 .logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 30%;
-    height: 30%;
+    display: inline-flex;
+    margin-left: 0;
+    padding-right: 0;
+    width: 40%;
+    height: 40%;
 }
 .hzlogo {
     width: 500px;
@@ -30,6 +32,7 @@ h1 {
     display: block;
     margin-right: auto;
     margin-left: auto;
+    padding-right: 0;
 }
 
 h2 {
@@ -52,7 +55,7 @@ ul {
 }
 
 /* Different anchors */
-a {
+.footer {
     color: white;
     text-decoration: none;
     vertical-align: bottom;
@@ -60,7 +63,7 @@ a {
     justify-content: center;
     text-align: center;
 }
-a:hover {
+.footer:hover {
     color: red;
 }
 .main_a {
@@ -92,10 +95,11 @@ span {
 footer {
 
     width: 100%;
-    border-style: dashed none solid none;
     border-color: white;
+    background-color: #2d3748;
     border-width: 3px;
-    margin-bottom: 0%;
+    margin: 0;
+    display: inline-block;
 }
 ul {
     display: inline-block;
@@ -176,4 +180,64 @@ ol {
 
 .grades:hover {
     background: rgb(114, 114, 114);
+}
+
+/**************************blog page****************/
+
+.sidebar{
+    float: left;
+    margin-left: 5%;
+
+}
+.blogObj{
+    display: inline;
+    border-color: #718096;
+    border-style: none none solid none;
+    padding-bottom: 5px;
+    width: 200mm;
+}
+
+.blogPic{
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+    width: 40%;
+    height: 40%;
+}
+.sideUl{
+    float: left;
+    margin: 0;
+    margin-top: 0;
+    width: 70%;
+    padding: 0;
+}
+
+.sideP{
+    color: white;
+    text-align: left;
+    font-size: 17px;
+    padding: 0;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.sideH3{
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.sideA{
+    color: #807595;
+}
+.sideA:hover{
+    color: #A55E73;
+}
+
+/*****************Article****************/
+.articlePic{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    height: 40%;
 }

@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('faqs', function (Blueprint $table) {
+        Schema::create('assignments', function (Blueprint $table) {
             $table->id();
-            $table->string('question');
-            $table->text('answer');
-            $table->string('link')->nullable();
+            $table->text('body');
+            $table->boolean('completed')->default(false);
             $table->timestamps();
+            $table->timestamp('due_date')->nullable();
         });
     }
 
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('faqs');
+        Schema::dropIfExists('assignments');
     }
 };

@@ -1,31 +1,24 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Article;
 use App\Models\Faq;
 class WelcomeController
 {
     public function show($page){
-            return view("$page");
 
-    }
-
-    public function faq(){
-        $posts = Faq::all();
-        return view('faq', [
-            'posts' => $posts
+        return view("$page", [
+                'articles' => Article::latest()->get()
+            ], [
+            'faqs' => Faq::latest()->get()
         ]);
+
     }
 
+    public function blog($id){
 
-    public function blog($post){
-
-        return view("$post");
+        $article = Article::find($id);
+        return view('articles.show', ['article' => $article]);
     }
 
-    public function test($slug){
-
-        return view('welcome', [
-            'post' => Post::where('slug', $slug)->firstOrFail()
-        ]);
-    }
 }

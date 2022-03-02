@@ -13,13 +13,7 @@ use App\Http\Controllers\WelcomeController;
 |
 */
 
-Route::get('/posts/{post}', [WelcomeController::class, 'test']);
-
-Route::get('/faq', [WelcomeController::class, 'faq']);
-
-
 Route::get('/{page}', [WelcomeController::class, 'show']);
 
-
-Route::get('/blog/{post}', [WelcomeController::class, 'blog']);
+Route::get('/blog/{article}', [WelcomeController::class, 'blog']);
 
