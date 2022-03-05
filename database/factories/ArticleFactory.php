@@ -24,11 +24,12 @@ class ArticleFactory extends Factory
      */
     public function definition()
     {
+        $indexedArray = array("/images/tiltShift1.jpeg", "/images/tiltShift2.jpeg", "/images/tiltShift3.jpeg", "/images/tiltShift4.jpeg", "/images/tiltShift5.jpeg" );
         return [
             'title' => $this->faker->title,
             'excerpt' => $this->faker->text(100),
             'body' => $this->faker->paragraph(10),
-            'image_Link' => '/images/laravel.png',
+            'image_Link' => $indexedArray[array_rand($indexedArray)],
             'created_at' => now(),
         ];
     }

@@ -29,39 +29,28 @@
     font-size: 8mm;
 }
 
-/* Table Profile Page*/
-
-.prf_table {
-    margin-left: 25%;
-    margin-right: 25%;
-}
-.prf_td {
-    color: white;
-    font-weight: bold;
-    font-size: 8mm;
-    width: 100%;
+#myBar {
+    width: 0;
+    height: 30px;
+    background-color: #04AA6D;
     text-align: center;
-}
-.prf_th {
-    color: green;
-    font-size: 8mm;
-    white-space: nowrap;
+    line-height: 30px;
+    color: white;
 }
 
-/* Table FAQ*/
-.faq_table {
-    margin-top: auto;
-    margin-left: auto;
-    margin-right: auto;
-}
-.faq_td {
-    border-style: solid none none none;
-    border-color: white;
-    border-width: 5px;
-    padding-bottom: 8mm;
+#myProgress {
+    width: 80%;
+    background-color: grey;
+    margin-left: 10%;
 }
 
-.faq_table:hover {
-    color: red;
-    border-color: red;
+.grades {
+    border: none;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.grades:hover {
+    background: rgb(114, 114, 114);
 }

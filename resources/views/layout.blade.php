@@ -7,12 +7,12 @@
     <title>Homepage</title>
     <link rel="stylesheet" href="{{ URL::asset('/css/navbar.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('/css/mainCSS.css') }}">
-    <link rel="stylesheet" href="{{ URL::asset('/css/tables.css') }}">
+    @yield('head')
 </head>
 
 <header>
     <table class = "navMenu">
-        <td class="navlogo"><img class="logo" src="../images/ZLF-Logo.png"></td>
+        <td class="navlogo"><img class="logo" src="/images/ZLF-Logo.png"></td>
         <td class="navMenuItem"><a class="tablink" id="{{Request::path() === 'homepage' ? 'activeLink' : ''}}" href="/homepage">Home</a></td>
         <td class="navMenuItem"><a class="tablink" id="{{Request::path() === 'introduction' ? 'activeLink' : ''}}" href="/introduction">Who am I?</a></td>
         <td class="navMenuItem"><a class="tablink" id="{{Request::path() === 'study' ? 'activeLink' : ''}}" href="/study">Study</a></td>
@@ -26,7 +26,7 @@
 </body>
 <footer>
 
-    <ul>
+    <ul class="listMenu">
         <li>
             <a class="footer" href="https://hz.nl/uploads/documents/Regelingen/NL/Onderwijs-examenregelingen/OER-HZ-Ba2021-2022_Edefinitief-na-BDT-13-7-Nvdw-Eng.pdf">Course and ExaminationRegulations</a><br>
         </li>

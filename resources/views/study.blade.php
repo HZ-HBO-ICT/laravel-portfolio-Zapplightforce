@@ -1,22 +1,21 @@
 @extends('layout')
 
+@section('head')
+    <link rel="stylesheet" href="{{ URL::asset('/css/study.css') }}">
+@endsection
+
 @section('content')
 <body>
 <br>
 <br>
 <br>
 
-   <span class="code_a" style="margin-top: 500px">&ltbody&gt</span>
-    <br>
-    <span class="code_a" style="margin-left: 50mm;">&lth1&gt</span>
-
     <h1>Programme overview</h1>
 
-    <span class="code_a" style="margin-left: 50mm;">&lt/h1&gt</span>
-    <br>
+<br>
+<br>
 
     <table class="sty_table">
-        <span class="code_a" style="margin-left: 30mm;">&lttable&gt</span>
         <tr>
             <th class="sty_th">Quartile</th>
             <th class="sty_th">Course</th>
@@ -111,16 +110,13 @@
             <td class="sty_td"><input onclick="grades(grade15, 2.08)" type="button" value="/-----/" id="grade15" class="grades"></td>
         </tr>
     </table>
-    <span class="code_a" style="margin-left: 30mm;">&lt/table&gt</span>
-    <br>
 
-    <span class="code_a" style="margin-left: 40mm;">&ltdiv&gt</span>
-
+<br>
+<br>
     <div id="myProgress">
         <div id="myBar">0%</div>
     </div>
-    <span class="code_a" style="margin-left: 40mm;">&lt/div&gt</span>
-    <br>
-    <span class="code_a">&lt/body&gt</span>
+<br>
+<br>
 </body>
 @endsection

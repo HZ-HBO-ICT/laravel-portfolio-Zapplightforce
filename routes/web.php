@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\FaqController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
 /*
@@ -13,7 +15,17 @@ use App\Http\Controllers\WelcomeController;
 |
 */
 
+Route::resources([
+    'blog' => BlogController::class,
+    'faq' => FaqController::class,
+]);
+
+//--------Other Routes-------
+
+Route::get('/', function () {
+    return redirect('/homepage');
+});
+
 Route::get('/{page}', [WelcomeController::class, 'show']);
 
-Route::get('/blog/{article}', [WelcomeController::class, 'blog']);
 

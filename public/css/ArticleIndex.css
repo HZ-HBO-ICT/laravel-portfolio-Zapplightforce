@@ -1,0 +1,60 @@
+
+.indexRow{
+    display: inline;
+    border-color: #718096;
+    border-style: none none solid none;
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+.blogPic{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    height: 75%;
+}
+.indexTable{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    padding: 0;
+    display: block;
+}
+
+.indexData {
+    display: inline-block;
+    width: 33%;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+    background: linear-gradient(to top, #000000 20%, #313131  40%, #565656  60%, #7B7B7B  80%);
+}
+
+.indexP{
+    color: white;
+    text-align: center;
+    font-size: 17px;
+    padding: 0;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding-right: 1px;
+    padding-left: 1px;
+    padding-top: 3px;
+}
+
+.indexH3{
+    margin-bottom: 25px;
+    margin-top: 0;
+    text-align: center;
+    float: top;
+    padding: 0;
+    font-size: 30px;
+}
+
+.sideA{
+    color: #313131;
+}
+.sideA:hover{
+    color: #A55E73;
+}
