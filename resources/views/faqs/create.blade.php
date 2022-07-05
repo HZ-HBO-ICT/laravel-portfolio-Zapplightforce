@@ -17,7 +17,14 @@
                     <label class="label" for="question">Question</label>
 
                     <div class="control">
-                        <input class="input" id="question" name="question">
+                        <input class="input @error('question') is-danger-box @enderror"
+                               id="question"
+                               name="question"
+                               value="{{old('question')}}">
+
+                        @error('question')
+                        <p class="help is-danger">{{$errors->first('question')}}</p>
+                        @enderror
                     </div>
                 </div>
 
@@ -25,7 +32,11 @@
                     <label class="label" for="answer">Answer</label>
 
                     <div class="control">
-                        <textarea class="textarea resize-ta" id="answer" name="answer"></textarea>
+                        <textarea class="textarea resize-ta @error('answer') is-danger-box @enderror" id="answer" name="answer"></textarea>
+
+                        @error('answer')
+                        <p class="help is-danger">{{$errors->first('answer')}}</p>
+                        @enderror
                     </div>
                 </div>
 
@@ -49,3 +60,6 @@
     </div>
 @endsection
 
+@section('script')
+    <script src="{{ URL::asset('/js/script.js') }}"></script>
+@endsection

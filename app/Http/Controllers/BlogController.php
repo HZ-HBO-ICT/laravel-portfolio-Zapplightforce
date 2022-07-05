@@ -14,6 +14,7 @@ class BlogController extends Controller
      */
     public function index()
     {
+
         return view("articles.index", [
             'articles' => Article::latest()->get()
         ]);
@@ -35,8 +36,14 @@ class BlogController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
+        request()->validate([
+            'title' => 'required',
+            'excerpt' => 'required',
+            'body' => 'required'
+        ]);
+
         $imageArray = array(
             "/images/tiltShift1.jpeg",
             "/images/tiltShift2.jpeg",
@@ -65,7 +72,7 @@ class BlogController extends Controller
      */
     public function show($id)
     {
-        $article = Article::find($id);
+        $article = Article::findorfail($id);
         return view('articles.show', ['article' => $article]);
     }
 
@@ -77,7 +84,7 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        $article = Article::find($id);
+        $article = Article::findorfail($id);
             return view('articles.edit', ['article' => $article]);
 
     }
@@ -91,13 +98,13 @@ class BlogController extends Controller
      */
     public function update($id)
     {
-        $article = Article::find($id);
+        $article = Article::findorfail($id);
 
-        $article->title = request('title');
-        $article->excerpt = request('excerpt');
-        $article->body = request('body');
-
-        $article->save();
+        $article->update(request()->validate([
+            'title' => 'required',
+            'excerpt' => 'required',
+            'body' => 'required'
+        ]));
 
         return redirect('/blog/' . $article->id);
     }
@@ -110,10 +117,6 @@ class BlogController extends Controller
      */
     public function destroy($id)
     {
-        $article = Article::find($id);
-
-        $article->delete();
-
-        return redirect('/blog');
+         
     }
 }

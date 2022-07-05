@@ -31,8 +31,9 @@
 
 .faqH3 {
     font-size: 30px;
-    color: darkgrey;
     text-align: center;
+    color: rgb(154, 216, 250);
+    text-decoration: underline;
 }
 
 .faqList {

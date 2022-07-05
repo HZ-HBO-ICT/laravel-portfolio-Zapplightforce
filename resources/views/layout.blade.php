@@ -52,7 +52,6 @@
 </footer>
 
 
-
-<script src="../js/script.js"></script>
+@yield('script')
 
 </html>

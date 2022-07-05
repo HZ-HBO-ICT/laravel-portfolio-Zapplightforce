@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Faq;
 use Illuminate\Http\Request;
 
+
 class FaqController extends Controller
 {
     /**
@@ -61,13 +62,7 @@ class FaqController extends Controller
      */
     public function store(Request $request)
     {
-        $faq = new Faq();
-
-        $faq->question = request('question');
-        $faq->answer = request('answer');
-        $faq->categories = request('categories');
-
-        $faq->save();
+        Faq::create($this->validateFaq());
 
         return redirect('/faq');
     }
@@ -80,7 +75,7 @@ class FaqController extends Controller
      */
     public function show($id)
     {
-        $faq = Faq::find($id);
+        $faq = Faq::findorfail($id);
         return view('faqs.show', ['faq' => $faq]);
     }
 
@@ -92,7 +87,7 @@ class FaqController extends Controller
      */
     public function edit($id)
     {
-        $faq = Faq::find($id);
+        $faq = Faq::findorfail($id);
         return view('faqs.edit', ['faq' => $faq]);
     }
 
@@ -105,13 +100,9 @@ class FaqController extends Controller
      */
     public function update($id)
     {
-        $faq = Faq::find($id);
+        $faq = Faq::findorfail($id);
 
-        $faq->question = request('question');
-        $faq->answer = request('answer');
-        $faq->categories = request('categories');
-
-        $faq->save();
+        $faq->update($this->validateFaq());
 
         return redirect('/faq/' . $faq->id);
 
@@ -125,10 +116,22 @@ class FaqController extends Controller
      */
     public function destroy($id)
     {
-        $faq = Faq::find($id);
+        $faq = Faq::findorfail($id);
 
         $faq->delete();
 
         return redirect('faq');
+    }
+
+    /**
+     * @return array
+     */
+    public function validateFaq(): array
+    {
+        return request()->validate([
+            'question' => 'question',
+            'answer' => 'answer',
+            'categories' => 'categories'
+        ]);
     }
 }

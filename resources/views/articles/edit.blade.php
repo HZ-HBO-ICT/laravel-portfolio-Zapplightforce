@@ -18,7 +18,7 @@
                     <label class="label" for="title">Title</label>
 
                     <div class="control">
-                        <input class="input" id="title" name="title" value="{{$article->title}}">
+                        <input class="input " id="title" name="title" value="{{$article->title}}">
                     </div>
                 </div>
 
@@ -52,3 +52,6 @@
     </div>
 @endsection
 
+@section('script')
+    <script src="{{ URL::asset('/js/script.js') }}"></script>
+@endsection

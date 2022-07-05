@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\FaqController;
+use App\Http\Controllers\GradesController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
 /*
@@ -17,10 +18,16 @@ use App\Http\Controllers\WelcomeController;
 
 Route::resources([
     'blog' => BlogController::class,
-    'faq' => FaqController::class,
+    'faq' => FaqController::class
 ]);
 
 //--------Other Routes-------
+
+Route::get('/study', [GradesController::class, 'index']);
+//Route::get('/study', [GradesController::class, 'index']);
+
+Route::put('/study/{id}', [GradesController::class, 'update']);
+
 
 Route::get('/', function () {
     return redirect('/homepage');

@@ -12,6 +12,7 @@
     <img class="hzlogo" src="../images/hz-logo-removebg-preview.png">
 
 </div>
+
 @endsection
 
 

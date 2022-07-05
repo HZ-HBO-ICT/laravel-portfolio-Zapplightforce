@@ -14,7 +14,7 @@
     width: 70%;
     overflow: hidden;
     resize: both;
-    min-height: 35px;
+    min-height: 20px;
     line-height: 20px;
     margin-left: 10%;
     background-color: #313131;
@@ -69,4 +69,29 @@
     margin-top: 3%;
     margin-left: 10%;
     margin-bottom: 5%;
+}
+
+.is-danger {
+    color: red;
+    margin-left: 10%;
+    padding: 0;
+    display: inline;
+    border-color: red;
+    border: 2px;
+}
+
+.is-danger-box {
+    border: 1px solid red;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 6px;
+    display: block;
+    width: 70%;
+    overflow: hidden;
+    resize: both;
+    min-height: 35px;
+    line-height: 20px;
+    margin-left: 10%;
+    background-color: #313131;
+    color: #cbd5e0;
 }

@@ -15,7 +15,7 @@
     border-color: white;
     border-width: 3px;
     color: white;
-    padding-right: 10mm;
+    padding: 0;
     text-align: center;
 }
 .sty_th {
@@ -44,7 +44,7 @@
     margin-left: 10%;
 }
 
-.grades {
+#grade {
     border: none;
     text-align: center;
     background-color: black;
