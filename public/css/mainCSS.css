@@ -1,0 +1,87 @@
+body {
+    background-color: black;
+    display: block;
+    margin-top: 50px;
+}
+header {
+    width: 100%;
+    border:rgb(255, 255, 255);
+    border-style: solid none none none;
+    border-width: 3px;
+    background: linear-gradient(to right, #000000 20%, #313131  40%, #565656  60%, #7B7B7B  80%);
+    display: inline-block;
+}
+h1 {
+    color: rgb(154, 216, 250);
+    text-align: center;
+    text-decoration: underline;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h2 {
+    color: rgb(213, 185, 124);
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+p {
+    color: white;
+    text-align: center;
+    padding-left: 25%;
+    padding-right: 25%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.listMenu {
+    color: whitesmoke;
+    display: inline-block;
+    margin-left: 33%;
+    text-align: center;
+    font-size: 8mm;
+    list-style-type: none;
+}
+
+.logo {
+    display: inline-block;
+    float: left;
+    width: 50%;
+    height: 50%;
+}
+.footer {
+    color: white;
+    text-decoration: none;
+    vertical-align: bottom;
+    height: 100px;
+    justify-content: center;
+    text-align: center;
+}
+.footer:hover {
+    color: red;
+}
+.main_a {
+    color: green;
+}
+
+.main_a:hover {
+    color: yellowgreen;
+}
+
+span {
+    text-decoration: underline;
+    font-size: 6mm;
+    color: green;
+}
+
+/* --------------------*/
+
+footer {
+
+    width: 100%;
+    border-color: white;
+    background-color: #2d3748;
+    bottom:0;
+    display: inline-block;
+}

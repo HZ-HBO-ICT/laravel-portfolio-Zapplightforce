@@ -1,0 +1,97 @@
+.label {
+    color: #718096;
+    font-size: 40px;
+    margin-left: 10%;
+    padding-top: 5%;
+}
+
+.input, .resize-ta {
+    border: 1px solid #ccc;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 6px;
+    display: block;
+    width: 70%;
+    overflow: hidden;
+    resize: both;
+    min-height: 20px;
+    line-height: 20px;
+    margin-left: 10%;
+    background-color: #313131;
+    color: #cbd5e0;
+}
+
+#title {
+    font-size: 30px;
+    horiz-align: center;
+}
+
+#excerpt, #body {
+
+    text-decoration: none;
+    font-size: 20px;
+}
+#body {
+    min-height: 80px;
+}
+
+#excerpt {
+    min-height: 60px;
+}
+
+.submitButton {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline;
+    font-size: 16px;
+    margin-top: 3%;
+    margin-left: 73%;
+    margin-bottom: 5%;
+}
+
+#editButton {
+    margin-left: 54.5%;
+}
+
+.deleteButton {
+    background-color: Red; /* Red */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline;
+    font-size: 16px;
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-bottom: 5%;
+}
+
+.is-danger {
+    color: red;
+    margin-left: 10%;
+    padding: 0;
+    display: inline;
+    border-color: red;
+    border: 2px;
+}
+
+.is-danger-box {
+    border: 1px solid red;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 6px;
+    display: block;
+    width: 70%;
+    overflow: hidden;
+    resize: both;
+    min-height: 35px;
+    line-height: 20px;
+    margin-left: 10%;
+    background-color: #313131;
+    color: #cbd5e0;
+}

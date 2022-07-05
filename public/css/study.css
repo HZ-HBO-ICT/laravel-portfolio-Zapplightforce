@@ -1,0 +1,56 @@
+
+/* Study Table with the grades */
+
+.sty_table {
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sty_td {
+    border-top-style: solid;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-color: white;
+    border-width: 3px;
+    color: white;
+    padding: 0;
+    text-align: center;
+}
+.sty_th {
+    border-top-style: solid;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-color: green;
+    border-width: 5px;
+    color: green;
+    font-size: 8mm;
+}
+
+#myBar {
+    width: 0;
+    height: 30px;
+    background-color: #04AA6D;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+}
+
+#myProgress {
+    width: 80%;
+    background-color: grey;
+    margin-left: 10%;
+}
+
+#grade {
+    border: none;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.grades:hover {
+    background: rgb(114, 114, 114);
+}

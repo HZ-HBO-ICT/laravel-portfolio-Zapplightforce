@@ -1,0 +1,42 @@
+/* Set height of body and the document to 100% to enable "full page tabs" */
+body, html {
+    height: fit-content;
+}
+
+/* Style tab links */
+.tablink {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 0;
+    font-size: 25px;
+}
+
+.navlogo{
+
+}
+.navMenuItem{
+
+
+}
+
+.navMenu{
+float: right;
+    width: 100%;
+}
+
+.tablink:hover {
+    background-color: yellowgreen;
+    border-bottom-right-radius: 35%;
+    border-top-left-radius: 35%;
+
+}
+
+#activeLink{
+    background-color: forestgreen;
+    border-bottom-right-radius: 35%;
+    border-top-left-radius: 35%;
+}
